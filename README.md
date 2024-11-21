@@ -1,1 +1,1 @@
-Group assignement for project psychophysiology 24/25
+Group assignment for project psychophysiology 24/25
