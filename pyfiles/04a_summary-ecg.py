@@ -48,7 +48,7 @@ print(bpm_spiderhand)
 print(bpm_spidervideo)
 
 
-# ## 3. Use divisive baseline to compute base to walk ratio
+# ## 3. Calculate the ratio of spiderhand and spidervideo to baseline
 
 # In[3]:
 
@@ -68,8 +68,7 @@ average_rate_spidervideo = bpm_spidervideo.mean()
 
 
 # ## 4. Visualize
-# ### 4.1. Visualize all data using basic bar plot
-# We now visualize the average base to walk ratios computed per condition. First, let us have a look at what it looks like when we use a basic bar plot from matplotlib.   
+# ### 4.1. Visualize data using basic bar plot
 # 
 # Note how the **unit** and the **axis labels** are defined. These are essential information to be included in a plot. 
 

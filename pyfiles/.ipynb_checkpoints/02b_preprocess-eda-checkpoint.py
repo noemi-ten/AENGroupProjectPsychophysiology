@@ -1,25 +1,32 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
+# Import necessary packages
 import os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import pickle
 
-# File path to raw data folder
+# ## File path to raw data folder
 raw_data_folder = '/Users/erwin/Documents/ProjectPsychophysiologyData/raw-data/'
 
-# Parameters: predefined participants and tasks
+# ## Parameters: predefined participants and tasks
 participants = ['sub-1', 'sub-2', 'sub-3']
 tasks = ['baseline', 'spiderhand', 'spidervideo']
 
-# Preprocessing parameters
+# ## Preprocessing parameters
 downsample_factor = 100  # From 1000 Hz to 10 Hz
 window_size = 10  # 1-second window for smoothing
 sampling_rate = 10  # New sampling rate after downsampling (Hz)
 
-# Container for all data
+# ## Container for all data
 alldata = []
 
-# Iterate through predefined participants and tasks
+# ## Iterate through predefined participants and tasks
 for pi in participants:
     for ti in tasks:
         # Assemble file name
@@ -67,7 +74,7 @@ for pi in participants:
             # Log if the file is missing
             print(f"File not found: {filename}")
 
-# Save processed data to a pickle file
+# ## Save processed data to a pickle file
 derivative_folder = '/Users/erwin/Documents/ProjectPsychophysiologyData/preprocessed-data/'
 output_filename = os.path.join(derivative_folder, 'preprocessed_eda.pkl')
 
@@ -75,3 +82,10 @@ with open(output_filename, 'wb') as f:
     pickle.dump(alldata, f)
 
 print(f"Preprocessed EDA data saved to {output_filename}")
+
+
+# In[ ]:
+
+
+
+

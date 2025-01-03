@@ -29,7 +29,7 @@ print(loaded_data)
 
 # ## 2. Extract parameters
 
-# In[2]:
+# In[6]:
 
 
 import pickle
