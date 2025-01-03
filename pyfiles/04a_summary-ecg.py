@@ -5,7 +5,7 @@
 # ## 1. Import packages and load data
 # Load the .csv file that contains the interval-related analysis results from neurokit2. 
 
-# In[31]:
+# In[1]:
 
 
 import os
@@ -29,7 +29,7 @@ print(results)
 # We will aggregate over participants rather than contrasting between them, as commonly done in full experiments. This means that we are not interested in how sub-01 differs from sub-02 in a given condition, but rather in how walk_ground and walk_high conditions differ, for example.    
 # That is why there is one vector (or list) per condition, which would include more data points than 2 if we had more data sets. 
 
-# In[32]:
+# In[2]:
 
 
 # Filter rows for each condition
@@ -50,7 +50,7 @@ print(bpm_spidervideo)
 
 # ## 3. Use divisive baseline to compute base to walk ratio
 
-# In[33]:
+# In[3]:
 
 
 # Calculate the ratio of spiderhand and spidervideo to baseline
@@ -73,7 +73,7 @@ average_rate_spidervideo = bpm_spidervideo.mean()
 # 
 # Note how the **unit** and the **axis labels** are defined. These are essential information to be included in a plot. 
 
-# In[34]:
+# In[4]:
 
 
 # Data for the bar plot
@@ -95,7 +95,7 @@ plt.show()
 # ### 4.2. Better visualization
 # Pick a better color, display the scale more clearly by making some changes. There are loads of online resources for good visualization tutorials. Choosing the right color is also important for communication of your results. You may want to pick a color palette that is aesthetic as well as user-friendly- for example, see accessible color palette generator : https://venngage.com/tools/accessible-color-palette-generator
 
-# In[35]:
+# In[5]:
 
 
 import matplotlib.pyplot as plt

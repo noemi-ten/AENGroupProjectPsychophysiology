@@ -6,7 +6,7 @@
 # 
 # ## 1. Import packages and load the data 
 
-# In[1]:
+# In[5]:
 
 
 import pandas as pd  # installing neurokit2 installs most other packages too
@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 import pickle
 
 
-# In[2]:
+# In[6]:
 
 
 # File path to raw data folder
@@ -32,7 +32,7 @@ tasks = ['baseline', 'spiderhand', 'spidervideo']
 # Preprocessing operations will be applied to all data equally, regardless of which condition or which participant it is from. 
 # Thus, it is efficient to *concatenate*, or to stack the data next to each other, without having to point to multiple variable names. 
 
-# In[3]:
+# In[7]:
 
 
 alldata = []
@@ -69,7 +69,7 @@ for pi in participants:
 # 
 # We iterate over all data files, then visualize and example section of the data. 
 
-# In[14]:
+# In[8]:
 
 
 # parameters
