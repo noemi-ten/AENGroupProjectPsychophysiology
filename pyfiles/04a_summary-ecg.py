@@ -4,7 +4,7 @@
 # # Visualize ECG Data with Participant Trends
 # This notebook processes ECG data to visualize average heart rate across different conditions and connects individual participant data points with distinguishable lines.
 
-# In[ ]:
+# In[12]:
 
 
 # Import necessary libraries
@@ -17,7 +17,7 @@ import numpy as np
 # ## Load Data
 # Load the `.csv` file containing the summary of ECG results.
 
-# In[ ]:
+# In[13]:
 
 
 # Paths to folders
@@ -34,7 +34,7 @@ results.head()
 # ## Filter Data by Condition
 # Separate the data into `baseline`, `spiderhand`, and `spidervideo` conditions.
 
-# In[ ]:
+# In[14]:
 
 
 # Filter rows for each condition
@@ -55,7 +55,7 @@ averages
 # ## Define Plot Colors and Styles
 # Set up color schemes, line styles, and marker styles for visualization.
 
-# In[ ]:
+# In[15]:
 
 
 # Define colors and styles
@@ -68,7 +68,7 @@ marker_styles = ['o', 's', '^']  # Circle, square, triangle
 # ## Create Plot
 # Visualize the data using a bar chart with scatter plots and connect individual participant data points with distinct lines.
 
-# In[ ]:
+# In[17]:
 
 
 # Create the plot
@@ -101,14 +101,6 @@ for i, participant in enumerate(participants):
         linewidth=1.5
     )
 
-# Scatter plot for individual data points
-ax.scatter([0] * len(baseline), baseline['ECG_Rate_Mean'], 
-           color=scatter_colors[0], s=60, alpha=0.7, zorder=5, edgecolor='white', linewidth=1.5)
-ax.scatter([1] * len(spiderhand), spiderhand['ECG_Rate_Mean'], 
-           color=scatter_colors[1], s=60, alpha=0.7, zorder=5, edgecolor='white', linewidth=1.5)
-ax.scatter([2] * len(spidervideo), spidervideo['ECG_Rate_Mean'], 
-           color=scatter_colors[2], s=60, alpha=0.7, zorder=5, edgecolor='white', linewidth=1.5)
-
 # Add labels, title, and legend
 ax.set_ylabel('Heart Rate (bpm)')
 ax.set_title('Average Heart Rate by Condition with Participant Trends')
@@ -125,4 +117,10 @@ plt.savefig(figure_filename, bbox_inches='tight', pad_inches=0.1)
 
 # Display the plot
 plt.show()
+
+
+# In[ ]:
+
+
+
 
