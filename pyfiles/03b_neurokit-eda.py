@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[3]:
+# In[1]:
 
 
 import neurokit2 as nk
@@ -54,7 +54,7 @@ for pi in participants:
         print(f"Saved figure to {figure_filename}")
 
         # Close the plot to free memory after saving
-        plt.close()
+        #plt.close()
 
         # Process full-length interval-related data
         results = nk.eda_intervalrelated(signals_full, sampling_rate=1000)
