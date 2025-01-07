@@ -69,7 +69,7 @@ for pi in participants:
 # 
 # We iterate over all data files, then visualize and example section of the data. 
 
-# In[14]:
+# In[4]:
 
 
 # parameters
